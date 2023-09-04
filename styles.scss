@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    /*colors*/
+    --main: #323264;
+    --main-alt: #46466E;
+    --main-soft: #686887;
+
+    --accent: #F0145A;
+
+    --active-reg: #24A3FF;
+    --active-hover: #0085FF;
+    --active: #006CCF;
+
+    --grey-bg: #F5F5FA;
+    --grey-bg-alt: #EDEDF7;
+    --grey-text: #B3B3BA;
+    --grey-separator: #E6E6F0;
+
+    --gradient-regular: linear-gradient(129deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+    --gradient-soft: linear-gradient(42deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+    --gradient-red: linear-gradient(323deg, #F0145A 6.7%, #693264 70.36%);
+    --gradient-supersoft: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    --gradient-red-text: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+
+    /*fonts*/
+
+    --hero-font-size: 38px;
+    --h2-font-size: 30px;
+    --h3-font-size: 22px;
+    --h3-caps-font-size: 14px;
+    --h4-font-size: 16px;
+    --p-font-size: 16px;
+}
+    
+    $main-color: #323264;
+    $main-alt: #46466E;
+    $main-soft: #686887;
+
+    $accent: #F0145A;
+
+    $active-reg: #24A3FF;
+    $active-hover: #0085FF;
+    $active: #006CCF;
+
+    $grey-bg: #F5F5FA;
+    $grey-bg-alt: #EDEDF7;
+    $grey-text: #B3B3BA;
+    $grey-separator: #E6E6F0;
+
+
+
+    $gradient-regular: linear-gradient(129deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+    $gradient-soft: linear-gradient(214deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+    $gradient-red: linear-gradient(323deg, #F0145A 6.7%, #693264 70.36%);
+    $gradient-supersoft: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+    $gradient-red-text: linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+
+
+    @mixin hero-font {
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        }
+    @mixin h2-font {
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    @mixin h3-font {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    @mixin h3-caps {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    @mixin h4-font {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    @mixin p-font {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: $gradient-soft;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 10%;
+}
+header ul {
+    list-style: none;
+}
+
+.p--16px--400 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.h3--16px--700 {
+    font-size: 16px;
+    font-weight: 700;
+}
+#header--logo {
+    margin-left: 30px;
+    margin-top: 27px;
+}
+.lang--links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 5px 8px 5px 8px;
+    display: inline-block;
+    background: transparent;
+    border: none;
+    margin-right: 0;
+    border-radius: 7px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.lang--links a:hover {
+    background: $accent;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1vh;
+    position: relative;
+    margin-left: 48vw;
+}
+.menu a {
+    padding-right: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+}
+.menu a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+.header--about--link {
+    color: $accent !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px !important;
+    text-decoration-thickness: 2px !important;
+}
+.header--text {
+    z-index: 1;
+}
+.header--text--only {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-left: 38.3vw;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    color: #fff;
+}
+.header--text--only h3, .header--text--only p {
+    margin-right: 15px;
+}
+
+
+.home {
+    height:100vh;
+}
+
+#h-symbol {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    margin: auto;
+    
+    position: absolute;
+    bottom:0;
+    left: 20%;
+    right: 20%;
+}
+
+.home--hero--text {
+    z-index:5;
+    position: absolute;
+    margin: auto auto;
+    left: 27%;
+    right: 27%;
+    top: 46%;
+    bottom: 46%;
+}
+#hero--text--red {
+    color: $gradient-red-text;
+    background: -webkit-linear-gradient(#F0145A, #ef8080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#basic--info--section {
+    position: relative;
+    height:60vh;
+    width: 100vw;
+}
+
+.basic--info {
+    width: 85%;
+    position: absolute;
+    left:5%;
+    right: 15%;
+    top: 8%;
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 8%;
+    grid-row-gap: 0px;
+}
+.basic--info--left {
+    @include hero-font;
+    color: $grey-text;
+    font-size: 25px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.basic--info--left h3:hover {
+    color: $accent;
+}
+.basic--left--text{
+    margin-bottom: 25px;
+    text-align: right;
+}
+.basic--info--right {
+    grid-area: 1 / 2 / 2 / 3;
+    color: #fff;
+}
+.basic--info--right h2 {
+    @include h2-font;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.basic--info--right p {
+    @include p-font;
+}
+
+#scroll-button {
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+    right: 47%;
+}
+
+.home--services--toptext a {
+    color: $active-reg;
+    @include h3-caps;
+    text-decoration: none;
+}
+.home--services--toptext a:hover {
+    color: $accent;
+}
+.home--services {
+    height:100%;
+    width:100vw;
+}
+.home--services--toptext h1 {
+    @include hero-font;
+    color: $accent;
+    align-self: stretch;
+}
+.home--services--toptext {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    margin-bottom: 60px;
+}
+
+.services--grid {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    display: grid;
+grid-template-columns: repeat(9, 1fr);
+grid-template-rows: repeat(6, 1fr);
+grid-column-gap: 30px;
+grid-row-gap: 30px;
+}
+#s-img-1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+#s-img-2 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+#s-img-3 {
+    grid-area: 1 / 7 / 2 / 8;
+}
+#s-img-4 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+#s-img-5 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+#s-img-6 {
+    grid-area: 4 / 7 / 5 / 8;
+}
+
+.s-txt h3 {
+    @include h3-font;
+    color: $active-reg;
+    margin-bottom: 30px;
+}
+
+.s-txt p {
+    @include p-font;
+    color: #fff;
+    line-height: 26px;
+}
+
+#s-txt-1 {
+    grid-area: 2 / 1 / 4 / 4;
+}
+
+#s-txt-2 {
+    grid-area: 2 / 4 / 4 / 7;
+}
+
+#s-txt-3 {
+    grid-area: 2 / 7 / 4 / 10;
+}
+
+#s-txt-4 {
+    grid-area: 5 / 1 / 7 / 4;
+}
+
+#s-txt-5 {
+    grid-area: 5 / 4 / 7 / 7;
+}
+
+#s-txt-6 {
+    grid-area: 5 / 7 / 7 / 10;
+}
+
+/*
+.home--team {
+    position: relative;
+    height:100vh;
+    background-color: #fff;
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.home--team--block h1 {
+    @include hero-font;
+    color: $accent;
+}
+
+.home--team--block h3 {
+    @include h3-caps;
+    color: $active-reg;
+    font-size: 14px;
+}
+.home--team--block h4 {
+    @include h4-font;
+    color: $grey-text;
+}
+.home--team--block p {
+    @include p-font;
+    color: $grey-text;
+}
+
+.home--team--block img {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.home--team--block--text {
+    grid-area: 1 / 2 / 2 / 4;
+    background-color: $grey-bg;
+}
+.home--team--block {
+    width: 90%;
+}
+*/
+footer {
+    background-color: #fff;
+    position: absolute;
+    height: 30%;
+    width: 100%;
+}
+#footer-address {
+    color: $main-color;
+    font-size: 16px;
+}
+
+footer .circle {
+    color: $grey-text;
+}
+#onmap {
+    @include h3-caps;
+    color: $active-reg;
+    font-size: 16px;
+}
+#onmap:hover {
+    color: $accent;
+}
+#tel-number {
+    @include h3-font;
+    color: $main-alt;
+    font-size: 16px;
+}
+#footer-email {
+    @include h3-font;
+    color: $active-reg;
+    font-size: 16px;
+}
+#footer-email:hover {
+    color: $accent;
+}
+#footer-p-right {
+    float: right;
+    color: $grey-text;
+    margin-right: 5%;
+    margin-bottom: 10%;
+}
+
+.footer--left {
+    
+    width: 60%;
+    left: 5%;
+    position: relative;
+    top: 15%;
+}
+
+.footer--line--1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2%;
+    margin-top: 1%;
+}
+.footer--line--2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer--left h3, .footer--left p, .footer--left img {
+    margin-right: 10px;
+}
+
+/*HAMBURGER*/
+/*HAMBURGER*/
+/*HAMBURGER*/
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn 
+  
+  .header .menu-btn {
+    display: none;
+  }
+  */
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 500px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+
+/*HAMBURGER*/
+/*HAMBURGER*/
+/*HAMBURGER*/
+
+
+@media (max-width: 480px) {
+    .text {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 650px) {
+    .menu-icon {
+        display: block;
+    }
+
+}
